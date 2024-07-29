@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class Screen1 extends StatefulWidget {
   const Screen1({super.key});
@@ -21,7 +22,8 @@ class _Screen1State extends State<Screen1> {
               children: [
                 GestureDetector(
                   onTap: (){
-                    Navigator.of(context).pushNamed('/');
+                    //Navigator.of(context).pushNamed('/');
+                    context.go("/");
                   },
 
                   child: Container(
@@ -45,7 +47,8 @@ class _Screen1State extends State<Screen1> {
                 const SizedBox(width: 20.0,),
                 GestureDetector(
                   onTap: (){
-                    Navigator.of(context).pushNamed('/about',arguments: name);
+                    //Navigator.of(context).pushNamed('/about',arguments: name);
+                    context.go("/about");
                   },
 
                   child: Container(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class Screen2 extends StatefulWidget {
   final name;
@@ -20,7 +21,8 @@ class _Screen2State extends State<Screen2> {
             children: [
               GestureDetector(
                 onTap: (){
-                  Navigator.of(context).pushNamed('/');
+                  //Navigator.of(context).pushNamed('/');
+                  context.go("/");
                 },
 
                 child: Container(
@@ -44,7 +46,8 @@ class _Screen2State extends State<Screen2> {
               SizedBox(width: 20.0,),
               GestureDetector(
                 onTap: (){
-                  Navigator.of(context).pushNamed('/about',arguments: widget.name);
+                  //Navigator.of(context).pushNamed('/about',arguments: widget.name);
+                  context.go("/about");
                 },
 
                 child: Container(
